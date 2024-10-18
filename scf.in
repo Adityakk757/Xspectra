@@ -1,0 +1,78 @@
+&CONTROL
+    calculation   = 'scf'
+    pseudo_dir   = './'
+    outdir       = './'
+    restart_mode = 'from_scratch'
+/
+
+
+&SYSTEM
+    a     =  5.50300e+00
+    b     =  7.64600e+00
+    c     =  5.49200e+00
+    degauss                   =  1.00000e-02
+    ecutrho                   =  8.00000e+02
+    ecutwfc                   =  1.20000e+02
+    hubbard_u(3)              =  4.00000e+00
+    hubbard_J0(3)             =  0.20000e+00 
+    hubbard_u(4)              =  4.00000e+00
+    hubbard_J0(4)             =  0.30000e+00
+    ibrav                     = 8
+    lda_plus_u                = .TRUE.
+    lda_plus_u_kind           = 0
+    nat                       = 20
+    nosym                     = .FALSE.
+    nspin                     = 2
+    ntyp                      = 6
+    tot_charge                = +1
+    occupations               = "smearing"
+    smearing                  = "gaussian"
+    starting_magnetization(3) =  1.00000e-01
+    starting_magnetization(4) =  1.00000e-01
+/
+
+&ELECTRONS
+    conv_thr         =  1.00000e-06
+    electron_maxstep = 200
+    mixing_beta      =  4.00000e-01
+    startingpot      = "atomic"
+    startingwfc      = "atomic+random"
+/
+
+K_POINTS {automatic}
+ 4  4  4  0 0 0
+
+ATOMIC_SPECIES
+Oh     15.99940  Oh.pbe-n-kjpaw_psl.1.0.0.UPF
+O      15.99940  O.pbe-n-kjpaw_psl.1.0.0.UPF
+Mn     54.93805  Mn.pbe-spn-kjpaw_psl.0.3.1.UPF
+Cr     51.99610  Cr.pbe-spn-kjpaw_psl.1.0.0.UPF
+La    138.90550  La.pbe-spfn-kjpaw_psl.1.0.0.UPF
+Ca     40.07800  Ca.pbe-spn-kjpaw_psl.1.0.0.UPF
+
+
+ATOMIC_POSITIONS {angstrom}
+Oh      1.210033   0.288704   1.545840
+O       1.521120   7.310936   4.247051
+O       4.325991   4.130881   3.914211
+O       3.911822   3.485935   1.156819
+O       4.291085   7.337096   3.957337
+O       3.956379   0.336394   1.209901
+O       1.155835   3.547760   1.591192
+O       1.547806   4.162345   4.289213
+O       2.860402   1.886598   3.240651
+O       5.419621   5.760509   0.396908
+O       2.703834   5.758793   2.329589
+O       0.176582   1.885849   5.063392
+Mn      0.001275   0.028080  -0.001500
+Mn      2.752284   0.031810   2.747682
+Cr     -0.003666   3.794273  -0.002481
+Cr      2.749951   3.789363   2.743469
+La      0.176918   5.722490   2.773097
+La      2.916017   5.715623   5.452329
+La      5.323118   1.924372   2.708226
+Ca      2.530593   1.916187   0.065075
+
+
+
+
