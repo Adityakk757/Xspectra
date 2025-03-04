@@ -2,8 +2,8 @@
     calculation='xanes_dipole',
     prefix="pwscf"
     outdir='./',
-    xniter=1000,
-    xcheck_conv=50,
+    xniter=1000000,
+    xcheck_conv=1000,
     xepsilon(1)=1.0,
     xepsilon(2)=0.0,
     xepsilon(3)=0.0,
